@@ -120,8 +120,31 @@ class EmojiArtViewController: UIViewController,UIDropInteractionDelegate,UIScrol
     
     // so there are 3 required numberOfItemsInSection,cellForItemAt , numberOfSection
     // we dont want to implement numberOfScetions as it defaults to 1 that's true for tableView and collectionView
+    
+    private var addingEmoji = false
+    
+    @IBAction func addEmoji() {
+        addingEmoji = true
+    
+        //Now Section 0 gonna be plus button or textfield depending on if I am adding emoji at the time
+        //And section 1 gonna be all emojis
+    emojiCollectionView.reloadSections(IndexSet(integer: 0))
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return emojis.count
+        
+        switch  section {
+        case 0:  return 1
+        case 1:  return emojis.count
+        default: return 0
+        }
+
     }
     
     //MARK:- Dynamic Font accessibility UIFontMetrics Accessbility
@@ -131,6 +154,8 @@ class EmojiArtViewController: UIViewController,UIDropInteractionDelegate,UIScrol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.section == 1{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiCell", for: indexPath)
         
         if let emojiCell = cell as? EmojiCollectionViewCell{
@@ -141,7 +166,52 @@ class EmojiArtViewController: UIViewController,UIDropInteractionDelegate,UIScrol
         }
         
         return cell
+        }
+        else if addingEmoji{
+            
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiInputCell", for: indexPath)
+        return cell
+        }
+        else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddEmojiButtonCell", for: indexPath)
+            return cell
+        }
+        
+        
     }
+    
+    // MARK:- CollectionViewFlowlayout
+    //For making cell size bigger where we want textField
+    //Should calculate those blue number for width height based on user accessibility font size and all stuff
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if addingEmoji && indexPath.section == 0{
+            // If we are having textfield then we are having wide cell
+            return CGSize(width: 300, height: 80)
+            
+        }
+        
+        else {
+            
+            return CGSize(width: 80, height: 80)
+            
+        }
+        
+    }
+    
+    //Called right before it displays a cell
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if let inputcell = cell as? TextFieldCollectionViewCell{
+            
+            // to make textfield first responder this way when the textField comes up the keyboard comes up
+            inputcell.textField.becomeFirstResponder()
+            
+        }
+        
+    }
+    
+    //MARK:- UICollectionViewDragDelegate
     
     // itemsForBeginning is the thing that tells dragging system here's what we are dragging  , so we have to provide dragItem to drag
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
@@ -158,8 +228,8 @@ class EmojiArtViewController: UIViewController,UIDropInteractionDelegate,UIScrol
     }
     
     private func dragItems(at indexPath : IndexPath)-> [UIDragItem]{
-        
-        if let attributedString = (emojiCollectionView.cellForItem(at: indexPath) as? EmojiCollectionViewCell)?.label?.attributedText {
+        //disabled dragging when adding emoji i.e. textfield and keyboard is up because it messes things up when we are swapping things up so took that out
+        if  !addingEmoji, let attributedString = (emojiCollectionView.cellForItem(at: indexPath) as? EmojiCollectionViewCell)?.label?.attributedText {
 
             let dragItem = UIDragItem(itemProvider: NSItemProvider(object: attributedString))
 
@@ -173,7 +243,7 @@ class EmojiArtViewController: UIViewController,UIDropInteractionDelegate,UIScrol
         
     }
     
-
+    //MARK:- UICollectionViewDropDelegate
     
     func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
         return session.canLoadObjects(ofClass: NSAttributedString.self)
@@ -181,9 +251,19 @@ class EmojiArtViewController: UIViewController,UIDropInteractionDelegate,UIScrol
     
     func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
         
+        // if dropped on emoji section its fine not on adding section so cancel
+        //That is not allowing drop in section 0
+        if let indexPath = destinationIndexPath , indexPath.section == 1 {
+            
         let isSelf = (session.localDragSession?.localContext as? UICollectionView) == collectionView
         
         return UICollectionViewDropProposal(operation: isSelf ? .move : .copy , intent: .insertAtDestinationIndexPath)
+        }
+        else{
+            // cancel drop if section is not 1
+            return UICollectionViewDropProposal(operation: .cancel)
+            
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
