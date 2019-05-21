@@ -170,6 +170,44 @@ class EmojiArtViewController: UIViewController,UIDropInteractionDelegate,UIScrol
         else if addingEmoji{
             
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiInputCell", for: indexPath)
+            
+            if let inputCell = cell as? TextFieldCollectionViewCell{
+                
+                //MARK:- Calling closure mentioned in TextFieldCollectionViewCell
+                //Gonna set it to closure that does what I want
+                inputCell.resignationHandler = { [weak self , unowned inputCell] in
+                    
+                    if let text = inputCell.textField.text{
+                        
+                        self?.emojis = (text.map{String($0)} + self!.emojis).uniquified
+                        
+                        //Oh self does it cause a memory cycle or does it cause a multi threaded issue...???
+                        //There's no multithreaded issue here because we dont have problem with cells that scrolled off and scrolled back on
+                        // But there's a memory cycle here
+                        
+                        //because self is ourselve as a viewcontroller and we point to our collectionView , our collectionView points to its cells , its cell points to this closure and this closure points backs to ourselves so its going round and round
+                        //So we have to break this with weak self
+                        
+                        //But theres another memory cycle here
+                        //Sometimes it says about self that doesnt mean there might not be another 1 in there
+                        //And there is an another one its "inputCell"
+                        //This var inputCell and I am using it in closure which will capture it and yet its pointing to the closure to resignation handler so this has to broken as well
+                        //This 1 we can break with unowned , because we  know we would never be inside this closure executing it if "inputcell" is nil
+                        
+                        
+                        self?.addingEmoji = false
+                        
+                        //Why reloadData because we just added emoji to our model
+                        //And anytime you change your model you need to update your table
+                        self?.emojiCollectionView.reloadData()
+                        //reload cause it to go look at my new model call all the functions of collectionview
+                        
+                    }
+                    
+                }
+                
+            }
+            
         return cell
         }
         else{
