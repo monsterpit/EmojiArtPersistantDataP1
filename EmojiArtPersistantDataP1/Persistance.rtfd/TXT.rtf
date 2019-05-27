@@ -1,7 +1,10 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red255\green255\blue255;
+\red128\green0\blue128;\red92\green38\blue153;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgenericrgb\c0\c0\c0;\csgenericrgb\c100000\c100000\c100000;
+\csgenericrgb\c50196\c0\c50196;\csgenericrgb\c35922\c14825\c60191;}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
 
@@ -10,8 +13,9 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \b0 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 10.42.32 AM.png \width13880 \height7800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}
-\b \
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
 \cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
@@ -27,8 +31,9 @@ The user creates some stuffs in emojiArt document or something like that and you
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \b0 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 10.58.05 AM.png \width14560 \height7660 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}
-\b \
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 \cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
@@ -37,12 +42,14 @@ The user creates some stuffs in emojiArt document or something like that and you
 It's kinda like a dictionary that persist\
 You put things in this dictionary with keys and values  and when you run the app next time , they are still there \
 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b The only restriction on that though is , the only things you can put in this dictionary is Property List\
+\b \cf0 The only restriction on that though is , the only things you can put in this dictionary is Property List\
 Now Property List is not a type or anything like that \
 It's just a concept , A property List is any combination , any data structure that is any combination only array dictionary String, date , data or a number (int, float , double , etc.) that's what we call a property List\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b0 \
+\b0 \cf0 \
 that's the only thing we can put in this lightweight database called UserDefault.\
 \
 \
@@ -87,16 +94,21 @@ Most notably when you are in debugging and you can stop in the debugger all the 
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 11.21.48 AM.png \width14160 \height4300 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 So if you want to explicitly save you wanna use this method\
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+So if you want to explicitly save you wanna use this method\
 synchronize()\
 And it returns a bool whether it saved it  successfully or not \
 You dont know whats you gonna do if it wasnt successful I will just try again in a little bit , but we usually dont look through return value basically we just say synchronize \
 So lots of time people will put synchronize because they are doing debugger and they are hitting stop all the time ugh it didnt saved them and you have to run it again so you can feel to free to do that if want it , its pretty lightWeight\
 \
 \
-\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 Problem with UserDefault is \
+1) Only small things\
+2)Has to be property List
+\b0 \
 \
 \
 \
@@ -108,8 +120,376 @@ So lots of time people will put synchronize because they are doing debugger and 
 \b0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0  \
+//https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Archiving.html#//apple_ref/doc/uid/TP40008195-CH1-SW1\
+//https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/NibFile.html#//apple_ref/doc/uid/TP40008195-CH34-SW1\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Archiving is the process of converting a group of related objects to a form that can be stored or transferred between applications.
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 In an object-oriented program, groups of objects form a network through their relationships with each other\'97either through a direct reference to another object or through a chain of intermediate references. These groups of objects are referred to as object graphs. Object graphs may be small or large, simple or complex. An array object that contains a single string object represents a small, simple object graph. A group of objects containing an application object, with references to the windows, menus and their views, and other supporting objects, may represent a large, complex object graph.\
+Sometimes you may want to convert an object graph\'97usually just a section of the full object graph in the application\'97into a form that can be saved to a file or transmitted to another process or machine and then reconstructed. This process is known as 
+\i archiving
+\i0 .\
+Some object graphs may be incomplete\'97these are often referred to as 
+\i partial object graphs
+\i0 . Partial object graphs have placeholder objects that represent the boundaries of the graph and that may be filled in at a later stage. An example is a nib file that includes a placeholder for the File\'92s Owner. \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 11.57.51 AM.png \width15040 \height4200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+  What If I wanna store 
+\b some dataStructure that is big and/ or has things other than property Lists in it
+\b0 \
+And to do that I can use archiving \
+Now there's 2 mechanisms for archiving an old way and a new way for 
+\b iOS 11
+\b0  way \
+And of course I am gonna talk in detail about the new for iOS eleven way because old way obviously wasnt good enough they came up with a new one in iOS  11 \
+but they are very very similar in some ways it's just that the new way is a 
+\b lot more automatic and a lot less code to write 
+\b0 \
+So lets talk about these 2 ways the old way is called 
+\b NSCoder 
+\b0 \
+\
+NSCoder is a protocol\
+\
+(1) NSCoder\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 11.57.59 AM.png \width14400 \height6660 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+Essentially NSCoder boils down to having every single object in object graph that you want to save or whatever make persistent  implement this 2 things \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 func encode(with aCoder : NSCoder)
+\b0 \
+So that NSCoder is kind of like is a dictionary thing you can set values in there\
+and then \
+\
+
+\b init(coder : NSCoder)
+\b0 \
+It's gonna give you that dictionary back and you got it initialize the object  , \
+\
+So its very simple you are just gonna have encode sent to every single object in the object graph and it's gonna put itself in like the big dictionary and then when you want to bring it back to life you start telling init(coder) and they all have to initialize themselves\
+This is how storyboards are saved \
+\
+So ViewController , UIView , UILabel , UIButton all of them implements both of these things encode and init(coder) \
+And somebody went to a painstaking amount of work to implement that for every possible thing that can be in a storyboard , It's amazing how much work that actually took so t
+\b hat's great you have this encoding and decoding ability , but what you do with it ?
+\b0 \
+
+\b Well what you almost always do with it is you turn this thing into a data 
+\b0 remember our friend 
+\b data bag of bits that little struct you turn it into data and then you can store the data into filesystem because that's you gonna learn that's how you interact with filesystems , we store and we read data 
+\b0 \
+ \
+\
+So how do you take big object graph where every single object and in there implements  this 2 things (i.e. 
+\b func encode(with aCoder : NSCoder) and init(coder : NSCoder)
+\b0 ) and turn it into a data \
+You do it with class NSKeyedArchiver \
+So 
+\b NSKeyedArchriver
+\b0  just 
+\b takes an object that it and everything it points to implements these 2 things and it gives you back a data that has taken the whole object  graph and collected it up into a data 
+\b0 \
+and similarly if you give it back a data like that to 
+\b NSKeyedUnarchiver
+\b0  , t
+\b hen it will turn it back to the objects by calling that in it so \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 This is lot of work to make this mechanism work because you got to implement those 2 things for every single object in there\
+\
+\
+\
+\
+\
+\
+\
+So let's talk about the New way \
+Which is quite Similar\
+\
+(2) Codable \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 3.04.42 PM.png \width14240 \height8140 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 Codable is a protocol i.e. actually 2 protocols decodable and encodable
+\b0 \
+And it work's same kind of way you still have a init and you still have an encode thing\
+Difference is Swift  and the runtime and the foundation will implement those  2 methods for you almost all the time \
+You just kind of implement them for free , so you dont have to do anything , So as long as you are using kind of basic types in Swift including all the things you see on the slides  it just all magically works \
+So I am gonna show you both \
+How we then take an object graph and turn into a data with this mechanism which is slightly different than the 
+\b NSKeyedUnarchiver
+\b0  thing \
+and I am also gonna show you what it looks like to make something codable because to make it to do this it has to be code wise to implement codable \
+So lets' look at first let's look at how we turn into a data here instead of turning into they are just an arbitrary blob of data that we dont know what it is\
+ we actually encode it to known format like JSON \
+JSON(is essentially just like this text format for describing things on the internet passing data around ) and so JSON is well known format \
+and you can turn that big object graph into a description of it that is JSON amazingly \
+\
+and 
+\b there's another encoder that can do this , it does property list
+\b0 \
+So this whole thing is about User Defaults where everything is an array of strings or dates or numbers and you can also turn it into something like that\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 3.08.05 PM.png \width14540 \height8500 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+So those are the 2 encoders that come with iOS and how do you do this ?\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 well you just have your object at that's of    my type      some type    you define that  type has to be codable 
+\b0 \
+and
+\b  as long as it's codable and everything it wants to be archived inside of it is codable then you can say\
+jsonData = try to JSONEncode that object and it's gonna give you back a data blob and in that data blob is a JSON representation of your entire object graph , which is pretty incredible 
+\b0 \
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf3 \cb4     
+\f3\b \cf5 let
+\f2\b0 \cf3  object : \cf6 MyType\cf3  = ...
+\f0 \cf0 \
+
+\f2 \cf3     
+\f3\b \cf5 let
+\f2\b0 \cf3  jsonData : \cf6 Data\cf3 ? = 
+\f3\b \cf5 try
+\f2\b0 \cf3 ? \cf6 JSONEncoder\cf3 ().encode(object)
+\f0 \cf0 \
+
+\f2 \cf3     Note that this encode 
+\f3\b \cf5 throws
+\f2\b0 \cf3 . you can 
+\f3\b \cf5 catch
+\f2\b0 \cf3  and find errors easily 
+\f0 \cf0 \cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+Now notice it throws , it's very unlikely to throw when you are encoding but it could possibly have something where first I dont know why but it couldn't encode it, it's possible it could throw \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 (****)\
+(encoding mostly doesnt throws)
+\b0 \
+Btw if you have a data blob that's JSON you might wanna look it as a String ,\
+
+\b Well JSON is always encoded as 
+\i\b0 utf-8
+\i0\b  that's the string encoding it uses 
+\b0 , So you can always just take a data blob like JSON data and from that create a string with it \
+And all it string needs to know is what's the encoding you say it's 
+\b .utf-8 which is Unicode 8-bit encoding 
+\b0 \
+\
+
+\b (decoding mostly throws)
+\b0 \
+
+\b Alright now what if you have a JSON representation of your whole object graph and you wanna create the object graph out of it.
+\b0 \
+Well you just use a JSON decoder and say decode and all you have to do here is specify the class or struct of the  top-level thing in that JSON represented by that JSON and give it a JSON data blob and it will decode it , now this also throws and this is more likely to throw ,may be your JSON is corrupted or it's malformed or something like that  and its quite possible to make this all work where you are using some standard JSON from some website out there and you are converting it to objects in your code  where you make it do one to one mapping and so may be website you went to had a error and they generated bad JSON or something so this could throw here\
+\
+Notice JSON is the opposite of strongly typed \
+Okay like a date in JSON is just a string in some format , there's no such concept as a date type in JSON\
+So this 
+\b decoder is quite configurable 
+\b0 , So you specify things like what is the
+\b  strategy to decode what should be a date , in other words what format our date stored  in this JSON file so you can specify those kind of things to configure to decoder to be able to figure out this JSON representation 
+\b0 \
   \
 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 (******)
+\b0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 3.21.47 PM.png \width13900 \height8240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+Now I talked  about throwing errors here's for example i am catching a  error that was thrown by this decoder and the reason I am showing this actually is not  because we are going to do this , You are unlikely to actually catch these decoding errors and do anything about them unless maybe you are debugging the JSON format you want to see where you made a mistake or  something but I wanted to show you here what it looks like to catch an error that is thrown that's an enum because rember that anything can be thrown you can throw any kind of things as an error all has to do is implement the protocol error which is really nothing so you can throw anything so a lot of times things will throw an enum and when they throw the enum you can do the same thing  we do with switch which is to grab the associated values out\
+So you see how that really works great for errors right\
+So you are catching key not found error and you are grabbing associated value which is one of which is the key that was not found okay\
+So this is a common thing to do is to throw an enum and in your catch you just catch the cases and you are allowed to do this same kind of grab the associated value as you can do with switch \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 3.36.30 PM.png \width13600 \height8260 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0  \
+So let's look at an example of making something be codable so I have got my struct to my type here \
+And its got date in it , string in it and then it has got some other var var which is some other type not shown here and to make it codable \
+All you have to do is make it codable is say 
+\b  : Codable
+\b0 \
+if I say it is codable then it is codable \
+Unless it or something inside of it cant be coded automatically by swift , So its not 1 of those things which we saw in previous slide\
+So here date is definitely codable , String is codable and presumably some other type has made itself codable as well \
+and so this thing is now codable and that's all I have to do lot easier than implementing init and encode for every single object in there\
+We just say it is codable and it is .\
+And the JSON that would be generated from using that  JSOn encoder would look something like this \
+\
+\{\
+	"someDate"   : "2017-11-05T16:30:00Z"\
+	"someString" : "Hello"\
+	"other"	     : <whatever SomeOtherType looks like in JSON>\
+\}\
+\
+Where someDate would be var and then date in some encoding strategy we decide \
+then someString and : hello \
+other : then whatever SomeOtherType looks like in JSON (like embedded ) in there you see and it so it can be recursively going down \
+\
+\
+\
+\
+\
+
+\b (****)CodingKeys :- For customizing the JSON  that you generate from your type
+\b0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 3.36.52 PM.png \width14380 \height8000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+now we might not want the JSON to look exactly like this\
+So can we tune this ?\
+Ya we can \
+
+\b  In JSON for example the keys usually dont have camelCase like someData like we do for our variable \
+Usually the keys are the words are separated with underbar "_" like some_date 
+\b0 \
+So we can easily change the keys that are generated when we use that JSON encoder by adding a private enum called 
+\b codingKeys
+\b0  which is a 
+\b string type enum
+\b0  and it has to implement the 
+\b protocol CodingKey 
+\b0 \
+and all it does is has a  case it's an enum right\
+
+\b it has a case for every var that we want encoded so if we have a var we dont want to encode it just dont put that case there 
+\b0 \
+and
+\b  if you have a var that you do wanna encode it but you wanna change the key just say equals the key you want
+\b0  \
+
+\b e.g. case someDate = "some_date"
+\b0 \
+So here I have said case some date equals some_date so now in JSON it's gonna say some_date instead of someDate \
+and Notice I didnt put some string case in there at all so some string is not even gonna be put in the JSON\
+
+\b Okay so this is really cool simple way to customize the JSON that you generate from your type \
+\
+
+\b0 \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 4.06.13 PM.png \width14040 \height8020 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 Now I am not gonna really talk about this, but you 
+\b can implement init(decoder )
+\b0 \
+The
+\b  thing that actually you know pulls the thing out of the JSON 
+\b0 if you want to do 
+\b some validation or some kind of complicated thing 
+\b0 or if for e.g. you have a type that Swift cant encode kay some new type that you invented that's not made up of other types of Swift can encode and you wanna do it and you can do it \
+\
+I just put this here as kind of so you can look at it later to see how you do it\
+ there's a 
+\b container in the decoder
+\b0  and you get it \
+and it's 
+\b got keys and values it looks like a dictionary
+\b0 \
+ it's not that hard one thing is when you are in 
+\b decoding a class 
+\b0 you have to be
+\b  careful to call super init 
+\b0 because you are decoding you have to implement in it so you got to call super init \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 4.06.56 PM.png \width13700 \height8020 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 but 
+\b dont call super init with the same decoder that was sent to you
+\b0  the 
+\b coder was sent to you as for decoding your vars you want to send this thing from container called super decoder that's a decoder of superclass vars 
+\b0 \
+and then of course you can also implement \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 4.39.39 PM.png \width14320 \height7920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 Then of course you can also implement encoding to encode random types that arent part of the Swift thing \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1221\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 Archiving whole point is  we take some object graph of Swift stuff and we turn it into a data and that data is either going to be JSON or propertyList format 
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\b \cf0 File Sytem 
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 30.27 s\
+Now we have the data we have to store this data in file System, we want to put it in a file\
 \
 }
