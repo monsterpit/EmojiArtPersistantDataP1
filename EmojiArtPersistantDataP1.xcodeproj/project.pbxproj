@@ -15,6 +15,7 @@
 		2C3CB2AF22912F5A006E1322 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2AE22912F5A006E1322 /* EmojiCollectionViewCell.swift */; };
 		2C3CB2B12291A0A3006E1322 /* EmojiArtView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2B02291A0A3006E1322 /* EmojiArtView+Gestures.swift */; };
 		2C3CB2B32291B037006E1322 /* UITextField.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 2C3CB2B22291B037006E1322 /* UITextField.rtfd */; };
+		2C626FED229BA88600896BDE /* Persistance.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 2C626FEC229BA88600896BDE /* Persistance.rtfd */; };
 		2CBD010E2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 2CBD010D2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd */; };
 		9B05FAEB227C2DB9005934A8 /* Table&CollecionView.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 9B05FAEA227C2DB9005934A8 /* Table&CollecionView.rtfd */; };
 		9B7E7802227AACD6009DF49F /* EmojiArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E7801227AACD6009DF49F /* EmojiArtViewController.swift */; };
@@ -34,6 +35,7 @@
 		2C3CB2AE22912F5A006E1322 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C3CB2B02291A0A3006E1322 /* EmojiArtView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiArtView+Gestures.swift"; sourceTree = "<group>"; };
 		2C3CB2B22291B037006E1322 /* UITextField.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = UITextField.rtfd; sourceTree = "<group>"; };
+		2C626FEC229BA88600896BDE /* Persistance.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Persistance.rtfd; sourceTree = "<group>"; };
 		2CBD010D2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = iPadMultiTaskingTut.rtfd; sourceTree = "<group>"; };
 		9B05FAEA227C2DB9005934A8 /* Table&CollecionView.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = "Table&CollecionView.rtfd"; sourceTree = "<group>"; };
 		9B7E7801227AACD6009DF49F /* EmojiArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				2CBD010D2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd */,
 				9B05FAEA227C2DB9005934A8 /* Table&CollecionView.rtfd */,
 				2C3CB2B22291B037006E1322 /* UITextField.rtfd */,
+				2C626FEC229BA88600896BDE /* Persistance.rtfd */,
 			);
 			path = EmojiArtPersistantDataP1;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C626FED229BA88600896BDE /* Persistance.rtfd in Resources */,
 				2CBD010E2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd in Resources */,
 				2C2A4D2D2276A2C500257078 /* LaunchScreen.storyboard in Resources */,
 				2C3CB2B32291B037006E1322 /* UITextField.rtfd in Resources */,

@@ -1,0 +1,115 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\b\fs24 \cf0 Persistence\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 10.42.32 AM.png \width13880 \height7800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 By persistence I mean making things stick around \
+The user creates some stuffs in emojiArt document or something like that and you of course want those things to stay around , you dont want them to disappear everytime you run the app\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\b \cf0 UserDefaults\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 10.58.05 AM.png \width14560 \height7660 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\b \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 Now this 1 is super duper simple \
+It's kinda like a dictionary that persist\
+You put things in this dictionary with keys and values  and when you run the app next time , they are still there \
+\
+
+\b The only restriction on that though is , the only things you can put in this dictionary is Property List\
+Now Property List is not a type or anything like that \
+It's just a concept , A property List is any combination , any data structure that is any combination only array dictionary String, date , data or a number (int, float , double , etc.) that's what we call a property List\
+
+\b0 \
+that's the only thing we can put in this lightweight database called UserDefault.\
+\
+\
+\
+So what does the API look like to put things in{{\NeXTGraphic Screen Shot 2019-05-27 at 11.21.25 AM.png \width15120 \height8100 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬} it. \
+\
+very simple It's got 2 main methods here , \
+func set(Any? , forKey : String)     // the Any has to be a Property list (or crash)\
+func object(forKey : String) -> Any?  // the Any is guaranteed to be a Property List\
+\
+The type is Any because there's no other way we can represent a Property List over there and this is a Objc API\
+But that Any has to be a property List so it can be a int, it can be  array of Strings , IT could be a Dictionary whose  keys are string  and whose values are array of doubles  whose all can be considered as property List\
+But in a array of CGFloat not a property List , because CGFloat is not a property List\
+\
+\
+\
+So how do you read and write those stuffs how do you access those methods well , You dont create a different UserDefaults things , you can but we dont usually do that , we instead use shared one we get by saying\
+UserDefaults.standard\
+standard is static var in UserDefaults class it returns the shared instance of UserDefaults thing \
+and then we set i.e call set to set values on it with object and key\
+We can also set nil but this is Any? that means clear out Any Value for this key\
+\
+\
+And there are connivence methods for getting things out because if you do object for key what type you gonna get back an Any\
+That means you have to use as well to save that they have methods\
+func double(forKey : String) -> Double\
+func array(forKey : String) -> [Any]?\
+func dictionary(forKey : String) -> [String : Any] ?\
+\
+e.g. for  double(forKey : String) -> Double if the thing in that s not a Double it's just gonna return 0 it's not Double? it's just Double\
+for array(forKey : String) -> [Any]? if key is not a String it's gonna return nil because its an optional\
+\
+\
+When am I gonna use it , This things is only for lightweight stuffs like settings , preference you wouldn't store documents or kind of serious user data in there with UserDefaults \
+\
+\
+Saving the Database\
+Database is automatically saved for you, So you really dont want to save it , But sometime you want to\
+\
+Most notably when you are in debugging and you can stop in the debugger all the time , sometimes you will stop it , before it can get a chance to save \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 11.21.48 AM.png \width14160 \height4300 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 So if you want to explicitly save you wanna use this method\
+synchronize()\
+And it returns a bool whether it saved it  successfully or not \
+You dont know whats you gonna do if it wasnt successful I will just try again in a little bit , but we usually dont look through return value basically we just say synchronize \
+So lots of time people will put synchronize because they are doing debugger and they are hitting stop all the time ugh it didnt saved them and you have to run it again so you can feel to free to do that if want it , its pretty lightWeight\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Archiving
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0  \
+\
+  \
+\
+\
+}
