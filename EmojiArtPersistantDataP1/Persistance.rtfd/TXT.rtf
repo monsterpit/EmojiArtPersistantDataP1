@@ -1135,8 +1135,9 @@ So here's the 2 methods..\
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b This is the method that converts the model into a data 
+\b \cf0 This is the method that converts the model into a data 
 \b0 \
 its' called\
 
@@ -1152,9 +1153,8 @@ But we are just gonna talk about the data way of doing it okay if you want to do
 \
 \
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b \cf0 and  so how I am gonna implement this method ?
+\b and  so how I am gonna implement this method ?
 \b0 \
 \
 \
@@ -1189,8 +1189,7 @@ now the type you see right there I already said you can throw there so the type 
 \
 \
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 You got Data and you got to turn it into your model\
+You got Data and you got to turn it into your model\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \b0 \cf0 \
@@ -1208,9 +1207,9 @@ This once is more likely to throw because here you are being given JSON thing or
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 8.45.16 PM.png \width14260 \height6680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
+\
 \
 \
 \
@@ -1221,8 +1220,9 @@ you can use all the methods in UIDocument like open which opens your document an
 So you provide it a closure there and it even tells you whether it successfully did it or not , if it doesnt successfully open it  (
 \b you do have to open Your UIDocument before you use it
 \b0  ofcourse because UIDocument wants to go and get the file and get the data and stuff like that call the method that converts into an emojiArt or whatever but you do have to open the file )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b You are gonna be looking at this thing called document state  (if open is unsuccessful)
+\b \cf0 You are gonna be looking at this thing called document state  (if open is unsuccessful)
 \b0 \
 \
 \
@@ -1237,12 +1237,10 @@ So you provide it a closure there and it even tells you whether it successfully 
 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 9.04.52 PM.png \width13560 \height8500 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 You can save your file explicitly or you can just do autosaving \
+You can save your file explicitly or you can just do autosaving \
 If you are doing autosaving this is the method you have to call to tell your UIDocument i have changed \
 updateChangeCount(.done)\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 Another way to do this is to use 
+Another way to do this is to use 
 \b undoManager
 \b0  of UIDocument  
 \b (undoManager is a really cool little class where everytime you do an operation like drag a new emoji in or resize it you go to the undoManager and say I just did the operation and here's the closure for how to undo it and then it automatically does undo and redo and just pull thsoe closures off till you can undo and then redo go back and forth
@@ -1274,11 +1272,11 @@ I am not sure why it makes you do that versus it going out and figuring it out I
 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 9.05.25 PM.png \width13740 \height6440 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 \
 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b When you are done with your Document you wanna close it \
+\b \cf0 When you are done with your Document you wanna close it \
 \
 Of course 1 of big things it does is save it if it's got any outstanding changes 
 \b0 \
@@ -1302,8 +1300,9 @@ So what is document state thing ?\
 Document state is a var in UIDocument you can look at it see how your documents are doing \
 here are some of the values \
 .normal    that means your document is ready to use , just do whatever you want with it that to the normal state\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b .closed  that means you either you havent opened it or you are tried to open it and failed and still in closed state 
+\b \cf0 .closed  that means you either you havent opened it or you are tried to open it and failed and still in closed state 
 \b0 \
 .savingError  which is you tried to save it and it failed  \
 .editingDisabled is a method on UIDocument which is disable editing (and why would you ever disable editing well \
@@ -1356,8 +1355,7 @@ This is really powerful way to make easy for user to find which document they wa
 \b0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 So you add this to dictionary if you have UIImage to be the thumbnail and return it \
+So you add this to dictionary if you have UIImage to be the thumbnail and return it \
 now it says there 
 \i NSThumbnail1024x1024SizeKey
 \i0\b  but it can be actually of any size\
@@ -1370,15 +1368,16 @@ now it says there
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 9.52.03 PM.png \width12380 \height4080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
+\
 So there's some other things in UIDocuments like \
 localizedName   it will look at the URL and get the name at the end of the URL things like that \
 you can find out if you have any unsaved changes currently\
 You can get the date the files was last saved\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b  you can even do user activity which is this thing where you start working on something on one device and then you go continue on another and you will be exactly where you were before 
+\b \cf0  you can even do user activity which is this thing where you start working on something on one device and then you go continue on another and you will be exactly where you were before 
 \b0 \
 \
 \
@@ -1407,14 +1406,12 @@ You can get the date the files was last saved\
 \cf0 UIDocumentBrowserViewController which is an awesome way to give a very powerful user interface for your user inside your own app to create files and move files delte files and put them in  folders you know drag them from iCloud drive to your local hard disk all this stuff 
 \b0 \
 you get this powerful UI very little work on your part as long as you have UIDocument based app\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 \
+\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 10.09.59 PM.png \width14900 \height8660 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 \
+\
 \
 \
 So until now we did all stuff so we can easily take whatever our document based app is and store it in a document , we went all the way through having UIDocument write things out to the fileSystem and now we are gonna add a really cool layer of UI in the front of that so that users can pick the document they want ,rename them , move them  around all that right inside your app and the UI for this  in pic above looks a lot like the files app in iOS 11 in fact the files app in iOS 11 is probably just a very thin layer on top of this UI or this API the UIDocumentBrowserViewController \
@@ -1424,12 +1421,12 @@ So until now we did all stuff so we can easily take whatever our document based 
 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 10.10.28 PM.png \width14660 \height8360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 \
+\
 So how do this thing work basically ?\
 (*****)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b Well most important thing  to understand is  that it's just a viewcontroller but its always the root view controller of your application 
+\b \cf0 Well most important thing  to understand is  that it's just a viewcontroller but its always the root view controller of your application 
 \b0 so in other words in your storyboard its always got the  little arrow that points to it and when you run the app its gonna be the viewcontroller user see first then they will pick their whatever document they want and then your UI will take over , your Viewcontroller will come up in front of this one do whatever it does to show your document \
 \
 that's the fundamental architecture of this thing\
@@ -1445,6 +1442,201 @@ that's the fundamental architecture of this thing\
 and you do that in your project settings\
 You go to project setting underneath the info tab you got to select the target not the project \
 go to the info tab and then inside there's a little section called document types well that's the types of document you open and you just fill out this you can have multiple types and you fill out this little form like that one here \
-for e.g. i have shown how to have JSOn files be a kind of files that you open and its pretty straightforward there , they are the little things at the bottom there the bundle type and the handler rank or basically just saying well is this like a primary type of file that you open are you the only owner of this type of file or its just some other type that you can that you know how to open etc.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 for e.g. i have shown how to have JSOn files be a kind of files that you open and its pretty straightforward there , they are the little things at the bottom there the
+\b  bundle type and the handler rank
+\b0  or
+\b  basically just saying well is this like a primary type of file that you open are you the only owner of this type of file or its just some other type that you can that you know how to open etc.\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 10.32.37 PM.png \width14940 \height8400 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\b \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\b0 You can have your own document type for e.g. for EmojiArt  but emojiArt really wants to have its own document type \
+.emojiArt or something like that and you set that up right below the document types called exported UTI's (Universal Type identifier )\
+and you can invent your own UTI as long as it's nice unique name like here we have used \
+\
+edu.standford.cs193p.emojiArt  that's very likely to be a unique type identifier \
+And i have to just specify couple of things most notable at the bottom there the file name extension that goes with an emojiArt I picked emojiArt \
+\
+\
+And once you set this up you can go back up to the document types one at the top and  add this as a document type that you can open just like that \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 10.38.47 PM.png \width14400 \height8340 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 For document Based we gonna use XCode template it doesnt actually give much in that template but it gives us enough that its worth doing so if you are going to do document based app I recommend going back and creating a new app a new project using this as the template \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+So what's in this template ?\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 10.39.38 PM.png \width14220 \height7880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+\
+One thing is that it stubs out that document type , it doesnt do JSON files , it does image files but you can change it to JSON files or add more types\
+It also puts an entry in your info.plist which is very important  called "Supports Document Browser"\
+and that's basically just saying that the documents that are stored inside your app sandbox are like real documents that people would want to open with like the files apps or something like that so that's an important entry to put in your  info.plist we gonna put in the demo manually just to emphasize it \
+\
+It has 1 method in app delegate \
+It has 1 method in there that allows other apps like the files app to ask your app to open your documents \
+It's very simple old method  which this template throws that in for you\
+\
+\
+It also stubs out a subclass of UIDocument which usually you dont need because you have already created that yourself and it also stubbed out an MVC to show the document just this really dumb MVC and you dont need that usually either because you obviously have an MVC that shows your document or you wouldnt be writing this app\
+\
+and finally it gives a subclass of UIDocumentBrowserViewController which services it's own delegate it's own delegate it just has like 5 methods in it that are really simple\
+\
+\
+So after you create your project with this template what you need to do to get your app working well \
+1) you got to have your own UIDocument subclass of course \
+2) you got to have your own document viewing MVC like emojiArtViewcontroller or ImageGalleryViewController\
+3) then you have to add little bit of code to this UIDocumentBrowserViewController subclass that comes with the template \
+		a)in it's viewDidLoad you are gonna configure it a little bit , it has a couple of vars you can set \
+		b)You are also gonna have to provide a URL of a blank document and this is so that when user go into UI and says create a new document yougot to copy some 		template some blank version of document to be that new document so you just have to give the URL of a blank document to so that you can support document \
+		creation \
+		c)Then finally the code you have to put int there is when someone wants to open one of your documents you have to write the code to put an MVC on screen and you 		dont do it with segue so we are gonna learn a little bit new way to put an MVC on screen that does not involve segues\
+		d) And the last thing you wanna do to the template is update those types the document types to be not be image but to be JSON or emojiART type or 		imageGalleryType  or whatever \
+\
+So those are only 4 things you do once you do those 4 simple things  you will get this full UI \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 11.02.31 PM.png \width15080 \height7500 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+Step 1 to 2 you have probably have already done in your app\
+Step 3 looks like this is viewDidLoad of UIDocumentBrowserViewController subclass\
+and you have to set it as its own delegate because it actually implements a lot of these opening file methods and stuff using its own delegate and stuff using its own delegate methods \
+then you can have some things like allowsDocumentCreation = true  do you allow people to create documents in your app or you are just an document viewer\
+allowsPickingMultipleItems   = true  do you allow multiple items to be picked in other words can user go in and like shift click or whatever the equivalent is with the touch interface to choose multiple items and open them at once like emojArt cant do that it can only show one document at a time \
+browserUserInterfaceStyle : .dark Then you can tweak the UI little bit , change the colors a tint colors and things like that to try and match your document controller when it comes up have same kind of look\
+\
+That's how you configure it in viewDidLoad that's most of the setting you can set\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 11.11.38 PM.png \width15000 \height6700 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+ and then you have to provide this template URL  \
+you kinda have to do it in weird way there's this method \
+\
+documentBrowser(_  , didRequestDocumentCreationWithHandler)  that's the method that's saying somebody wants to create a document of your type in your app what's you gonna give me is a URL to a template to a blank template and way it makes you do that is it hands you a little function called  "importHandler" and it just takes a URL\
+which is a URL of a blank document and then 
+\b import mode 
+\b0 which is either copy this or move it to create a new document \
+
+\b So it could be moved if you have created this thing every time this got called , its copy if you create it once and then you hand it out every time someone says new document \
+
+\b0 And that's it all you have to do is call that handler \
+\
+\
+\
+\
+\
+(*********)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-03 at 12.09.36 AM.png \width14920 \height7680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+Next you have present your document MVC , \
+\
+How to put MVC on screen without segue \
+It's quite easy \
+theres a method in UIViewController called \
+present(VC , animated : true)\
+you send it to yourself if you are a view controller and you give it an argument of another MVC and it presents it animated and it presents it on screen modally (which means it takeovers the entire screen) and just owns the entire screen until it dismisses itself and then its back to you which is exactly \
+\
+what we want here so the trick here though is how do I get new MVC to present\
+iOS has a few MVC like camera taking picture taking MVC and some things \
+but what if you have one of your own ?\
+well its actually easy you just put it your storyboard it wont have any segue drawn to it but what you are gonna do is you are gonna name it \
+you are gonna select it go to your identity inspector there's a little storyboard Id in there you give it a name and then you use that name in your code like this .\
+\
+You get an instance  of your storyBoard which you get by saying 
+\b UIStoryboard(name : "main" , bundle : nil)
+\b0     and you know that out storyboard is always been called main.storyboard but we havent talked about the fact that you can actually have multiple storyboards perfectly legal , we always just said that main and bundle is almost nil there because you got your main bundle \
+
+\b nil means main bundle 
+\b0 \
+So you get the storyboard and then you ask the storyboard to make you an MVC with that name by saying instantiate viewController with identifier \
+and that foo you have there is the thing in my identity inspector for that MVC for the top level controller of that MVC \
+\
+That's it now you just prepare that thing in this case you know by setting its document and then you just present it\
+So its really really easy instantiate viewController with identifier is the key method that you need out of the storyboard \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-03 at 12.42.51 AM.png \width14940 \height7260 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+So back to our present , so we need to write be able to write a function that presents it and really simple or its going to get our storyboard we are going to instantiate our viewcontroller from the storyboard , now really importantly we are gonna set the document of document showing MVC that we just got from storyboard \
+we gonna set it to be a new document with the URL that is passed to us because its present document at URL \
+Now this might be a new document it just created by copying that template or it might be some document we are reopening that was created in the past , you dont know and you dont care here\
+and then you call just present \
+\
+that's it you do all that and it just will all work \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-03 at 12.43.20 AM.png \width14860 \height3380 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+of course you want to set the types that you wanna do JSON or emojiArt whatever\
+\
+\
+\
+\
+\
+\
 \
 }
