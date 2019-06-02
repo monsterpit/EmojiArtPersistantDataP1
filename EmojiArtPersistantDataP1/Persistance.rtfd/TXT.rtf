@@ -125,14 +125,14 @@ So lots of time people will put synchronize because they are doing debugger and 
 \pard\pardeftab720\sl280\partightenfactor0
 
 \f1 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Archiving is the process of converting a group of related objects to a form that can be stored or transferred between applications.
-\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+Archiving is the process of converting a group of related objects to a form that can be stored or transferred between applications.
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sl280\sa240\partightenfactor0
 
 \f1 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 In an object-oriented program, groups of objects form a network through their relationships with each other\'97either through a direct reference to another object or through a chain of intermediate references. These groups of objects are referred to as object graphs. Object graphs may be small or large, simple or complex. An array object that contains a single string object represents a small, simple object graph. A group of objects containing an application object, with references to the windows, menus and their views, and other supporting objects, may represent a large, complex object graph.\
+In an object-oriented program, groups of objects form a network through their relationships with each other\'97either through a direct reference to another object or through a chain of intermediate references. These groups of objects are referred to as object graphs. Object graphs may be small or large, simple or complex. An array object that contains a single string object represents a small, simple object graph. A group of objects containing an application object, with references to the windows, menus and their views, and other supporting objects, may represent a large, complex object graph.\
 Sometimes you may want to convert an object graph\'97usually just a section of the full object graph in the application\'97into a form that can be saved to a file or transmitted to another process or machine and then reconstructed. This process is known as 
 \i archiving
 \i0 .\
@@ -141,7 +141,7 @@ Some object graphs may be incomplete\'97these are often referred to as
 \i0 . Partial object graphs have placeholder objects that represent the boundaries of the graph and that may be filled in at a later stage. An example is a nib file that includes a placeholder for the File\'92s Owner. \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
 \
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
@@ -328,16 +328,15 @@ So this
   \
 \
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b \cf0 (******)
+\b (******)
 \b0 \
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 3.21.47 PM.png \width13900 \height8240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
+\
 Now I talked  about throwing errors here's for example i am catching a  error that was thrown by this decoder and the reason I am showing this actually is not  because we are going to do this , You are unlikely to actually catch these decoding errors and do anything about them unless maybe you are debugging the JSON format you want to see where you made a mistake or  something but I wanted to show you here what it looks like to catch an error that is thrown that's an enum because rember that anything can be thrown you can throw any kind of things as an error all has to do is implement the protocol error which is really nothing so you can throw anything so a lot of times things will throw an enum and when they throw the enum you can do the same thing  we do with switch which is to grab the associated values out\
 So you see how that really works great for errors right\
 So you are catching key not found error and you are grabbing associated value which is one of which is the key that was not found okay\
@@ -350,8 +349,7 @@ So this is a common thing to do is to throw an enum and in your catch you just c
 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 3.36.30 PM.png \width13600 \height8260 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0  \
+ \
 So let's look at an example of making something be codable so I have got my struct to my type here \
 And its got date in it , string in it and then it has got some other var var which is some other type not shown here and to make it codable \
 All you have to do is make it codable is say 
@@ -378,21 +376,22 @@ other : then whatever SomeOtherType looks like in JSON (like embedded ) in there
 \
 \
 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b (****)CodingKeys :- For customizing the JSON  that you generate from your type
+\b \cf0 (****)CodingKeys :- For customizing the JSON  that you generate from your type
 \b0 \
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 3.36.52 PM.png \width14380 \height8000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 \
+\
 now we might not want the JSON to look exactly like this\
 So can we tune this ?\
 Ya we can \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b  In JSON for example the keys usually dont have camelCase like someData like we do for our variable \
+\b \cf0  In JSON for example the keys usually dont have camelCase like someData like we do for our variable \
 Usually the keys are the words are separated with underbar "_" like some_date 
 \b0 \
 So we can easily change the keys that are generated when we use that JSON encoder by adding a private enum called 
@@ -417,8 +416,9 @@ and Notice I didnt put some string case in there at all so some string is not ev
 
 \b Okay so this is really cool simple way to customize the JSON that you generate from your type \
 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b0 \
+\b0 \cf0 \
 \
 \
 \
@@ -427,8 +427,7 @@ and Notice I didnt put some string case in there at all so some string is not ev
 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 4.06.13 PM.png \width14040 \height8020 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 Now I am not gonna really talk about this, but you 
+Now I am not gonna really talk about this, but you 
 \b can implement init(decoder )
 \b0 \
 The
@@ -454,8 +453,7 @@ and it's
 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 4.06.56 PM.png \width13700 \height8020 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 but 
+but 
 \b dont call super init with the same decoder that was sent to you
 \b0  the 
 \b coder was sent to you as for decoding your vars you want to send this thing from container called super decoder that's a decoder of superclass vars 
@@ -469,8 +467,7 @@ and then of course you can also implement \
 \cf0 {{\NeXTGraphic Screen Shot 2019-05-27 at 4.39.39 PM.png \width14320 \height7920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 Then of course you can also implement encoding to encode random types that arent part of the Swift thing \
+Then of course you can also implement encoding to encode random types that arent part of the Swift thing \
 \
 \
 \
@@ -486,10 +483,968 @@ and then of course you can also implement \
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
-\b \cf0 File Sytem 
+\b \cf0 File Sytem \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-06-01 at 7.43.47 PM.png \width14540 \height8000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\b0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+Now we have the data we have to store this data in file System, we want to put it in a file\
+Remember that iOS is UNIX , so we have a UNIX filesystem underneath it \
+And stash at slash like another user in UNIX file system and all we need to do is store our data blob is just write it to a file \
+\
+So how do we access this UNIX filesystem  in iOS?\
+Well the most important thing to understand is that the only part of the UNIX file system you can access is your sandbox \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 Your sandbox is this a little enclosed space is the only place you can write you cant write into any system files anywhere You cant write into any other apps information , You can only write in the sandbox \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+Why does iOS restrict you to a sandbox ?\
+Well 3 main reasons \
+1) 
+\b Security
+\b0  (because we want to make sure that no other app can come along and break your app somehow , okay make it so that your app doesnt work)\
+\pard\tx560\tx1120\tx1225\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 2)
+\b Privacy
+\b0  (You are collecting user information whatever you dont want other malicious apps to be looking in there and getting that information  )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 3)
+\b Cleanup
+\b0  (Its an underrated , you want to be able to cleanup when the user says I dont want this app anymore , if you have everything in the sandbox you can delete that sandbox and now everything that app has ever done is gone , so does it clean up part of it)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 So accessing the UNIX file system is all about finding a starting point in this sandbox \
+And there are few starting points in this sandbox \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 For e.g.\
+There is your 
+\b application directory
+\b0  in the sandbox , \
+this has your executable or your storyboards JPEG files your image assets all those things this part of  sandbox \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 you can get  a UNIX  path to it but its completely not writable , you cannot write to any of this , you can read it 
+\b0 \
+\
+ if there was something you needed to write like lets say you passed some initial database or something you would have to copy it out in to one of the other places in your sandbox and edit it there \
+\
+And another place in your sandbox really important is the 
+\b documents directory 
+\b0 \
+This is where you store stuff that the user perceives as their data in document form\
+ and
+\b  the reason is important that it be user perceived as a document is this directory what's in there its going to be visible in the files app in iOS 11
+\b0 \
+In iOS 11 there is files app and it shows you all the files in all the document directories of all the apps \
+So dont put things in document directory unless they are perceived as documents by the user\
+\
+There's also
+\b  Application Support 
+\b0 that's 
+\b where you can put the stuff that the user creates that's not a document because that's not going to show up in files
+\b0 \
+\
+ and then there's other directories about there dozen other one them \
+for e.g. in 
+\b cache's directory
+\b0  that's 
+\b where you can put temporary stuff that could be deleted at any time and recreated
+\b0 \
+for e.g.  
+\b take images from image gallery and cache those images
+\b0  so that when people drag stuff in and they start scrolling around instead of constantly going back and fetching those things all the time you cache them in file system , well you are gonna put them in that cache's directory ,\
+
+\b because it wont count against your app in terms of disk space usage and you can always just refetch it again 
+\b0  its cache is blown away \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+So you need to get paths to all this things.... \
+So how do you get path to these special directories and then start building on it build your own paths \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-01 at 7.44.02 PM.png \width14880 \height6980 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 Well first thing to understand is that all the access to the file system is going to  happen through 2 classes \
+1)FileManager\
+2)URL 
+\b0 \
+\
+URL we can have it for network resources  and local resources (things on your disk and our URL is essentially just a path  a UNIX path to the file  )\
+so what you are gonna do before you do anything is find one of these sandbox directories because you got to write and read from one of these sandbox directories \
+So there's really 2 methods to get a sandbox URL \
+\
+FileManger method , the FileManager is kind of a UserDefault where we use the  shared once called default\
+although sometime we would want to create a different file manager by saying FileManger() , just calling its initializer which takes no argument\
+\
+So this 1 is called URL for Directory in Domain mask appropriate for create \
+So lets look at this arguments\
+theForDirectory is for sandbox directory you want like the document  directory , cache directory , application support directory \
+That's there and t's specified via a enum here , check documentation what's available there\
+
+\b In domain mask is always .userDomainMask in iOS
+\b0  
+\b because we are in sandbox and we can only look in sandbox \
+and in MacOS it could be sharedNetworkDomain , it could be systemSharedDomain , etc.\
+But in iOS its always userDomainMask
+\b0 \
+appropriateFor you will always set that for nil , that's basically if you are gonna replace a file you want to specify the URL of what you are gonna replace  so you can make sure it's on the same volume as the URL  you are getting , again kinda not meaningful in iOS  , most of the time so that's usually nil \
+
+\b create is a important one that just says you are gonna create that sandbox  special directory because not all of them exist when your app is created like application support does not exist , so you have to make sure you say create true , doesnt hurt when you say create true , document directory is already created for you \
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-06-01 at 9.41.04 PM.png \width14640 \height6560 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 So this is how you get a URL you can see the return value is a URL into the sandbox now that you have URL on the sandbox now you can start writing the files \
+and the way you do that is by using the URL method appending PathComponent \
+So adds a directory or the name of a file on to the end of the URL you can even add file extensions \
+It's perfectly legal btw to say appendingPathComponent Fuu.jpg  you dnt have do the extension with a separate call there \
+but anyways you gonna use that to build  a URL that extends path the sandbox and it could have directories and stuff \
+once you have URL you can find out about things like is it a file URL or is it an HTTP URL \
+You can get things like write date , is this a directory , how big is this file from this method 
+\b resourceValues
+\b0  in URL and resourceValues for keys takes a bunch of keys like  fileSize and stuff Like that and goes and looks it up in the fileSystem   and 
+\b returns a dictionary with those keys and values 
+\b0 it found that's why the values isn't any right there it could be a number , it could be string things like that okay , 
+\b so you can find a lot about your files \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-06-01 at 10.20.43 PM.png \width15180 \height6460 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 \
+How do you read and write files??
+\b0 \
+You do that with data \
+We have already used data to read file of the internet with HTTP URL \
+ofcourse you do that with fileURL as well\
+We did not use options when we did it because we will use the default options  which you mostly will but there are some read options you can go look at \
+\
+And to write files you are gonna send this to data right to URL and it also has options you can look at as well \
+\
+So that is how we read and write FileSystem \
+we have a data probably one we got by archiving the thing JSON or whatever with a archiver and we just read and write it with these 2 methods from the files system  \
+So you can see it's all about getting the right URL and it's easy to read and write \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-01 at 10.21.06 PM.png \width14680 \height5780 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+We gonna talk little more about 
+\b FileManager , You can do lot of more things besides just giving you a URL or something in sandbox ,
+\b0  \
+for eg 
+\b it can tell you whether a file exists in the file system , it can move files, copy files , create directories , enumerate directories , delete files and all that stuff all in FileManager
+\b0 \
+FileManager probably has 100 methods in that for all that , file manager also has a delegate \
+And that delegate almost all of those methods are should this , should I allow opening this file , should I allow to move this file , there kind of should think so a delegate control \
+whether the file manger are allowed to do things , that and the fact that fileManager is thread Safe but only within one instance of the file manager so if you have a file manager on other thread besides the main thread its thread safe but only if that file manger was created on that thread \
+and the FileManger.default that we saw before that's the main thread one , So dont use FileManager.default in any other thread but the main thread \
+And ofcourse if you gonna say delegate on the FileManger , you probably dont wanna set the delegate of FileManger.default that's kind of shared FileManger everyone's using in the main thread , So you probably wanna create the FileManager in that case  \
+it's multiple FileManager  know how to not step on eachother's toes \
+\
+\
+So we learnt simple little database which is UserDefaults where we can store propertyLists that's for setting things and stuff like that \
+then we learnt about how to do archiving  much more powerful we can  store other things and Swift will mostly do code for us but sometimes we can get involved if we want and it generates data \
+Then we learnt how to take those data with JSON and whatever in them and stored them in the FileSystem using FileManager and URL\
+\
+Now lets talk about next persistent thing which is CoreData\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\b \cf0 CoreData\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-06-01 at 10.33.32 PM.png \width14020 \height7800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 Now CoreData is if you have a large amount of data and you need to search over it in other words you need a database \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 So coreData is essentially a  SQL database with an object - oriented API 
+\b0 , 
+\b so you interact with this database it looks like swift objects but behind the scene those Swift objects are actually in a database a SQL database
+\b0 \
+\
+Now coreData is very powerful and can actually have backend look different things SQL but for most parts we use SQL backend in CoreData \
+So that's what CoreData is , its very efficient , beautifully object oriented\
+Check old Vids for all idea\
+It's way of having this object oriented programming layer with the backend SQL \
+\
+How do we do that ? How do we match those 2 things up ?\
+Well we actually have a tool in 
+\b XCode which is a visual mapper
+\b0  you build all your objects and all theirs vars in this mapper and the mapper is used to figure out how to do that mapping forward for you and it just happens automatically \
+\
+So if any of you know about databases , databases has tables they have rows in that tables that are records they have columns which are fields that still happening behind the scenes but you dont see any of that when you are programming because you are using an object oriented API \
+\
+\
+\
+So this is what the visual mapper looks like\
+\
+  {{\NeXTGraphic Screen Shot 2019-06-01 at 10.33.53 PM.png \width16160 \height9100 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+here we have couple of objects here Tweet and TwitterUser and those are going to map to objects in my code and tables in the database \
+and then got the fields like the tweets got to created a Unique identifier the text of the tweet and its even got a var which is the tweeter which points over to the twitter user and On the Twitter user side it's got a var called tweets which is going to point back which is actually a set of tweet object\
+\
+
+\b So this mapping is used by core data  on both sides object side to make all these things look like objects and on other side to build the tables and rows in the database\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 3.39.44 PM.png \width15020 \height4360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+So let's look at  what it kinda look likes to do it in code so you get an idea . \
+\
+(*****)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 The most important thing to understand about core data is to understand is that we access all of it from the code using NSManagedObjectContext 
+\b0 \
+\
+So this context is the key and there's 2 ways to get this context \
+1) You know when 
+\b we created a project
+\b0  there was that little switch there said use core data remember that so you can flip that on and then you will get a method in your app delegate that is giving you the context it's actually a var it gives you the context that's one way\
+2) Another way is to create a subclass it's use a subclass of 
+\b UIDocument
+\b0  which will give you the context and \
+UIDocument is a way of abstracting the document  \
+\
+So that's a way of looking at your entire database , It's just like looking at one big document , huge document because this database can be big  \
+\
+\
+\
+\
+\
+\
+\
+\
+Those are 2 ways to get context \
+\
+Once you have context in your hand , Now you can do all this accessing in the database looking like an object and here's what it looks like\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 3.40.17 PM.png \width14640 \height6760 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+So here for e.g.\
+I am creating a tweet and the  only argument to the initializer there is the context which tells is basically the database to put in ,\
+ but then if I want to set the text of the tweet I just say tweet.text looks just like swift \
+tweet.created = Date()\
+\
+I can even create a Joe a "TweeterUser" in the same context as the "Tweet" and say\
+tweet.tweeter = Joe\
+\
+I can even though \
+tweet.tweeter.name = "Joe Schmo"   \
+In other words use Swift notations to go through objects that I am linked to \
+So it really looks just exactly like Swift \
+\
+\
+\
+\
+\
+\
+\
+(******)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 3.52.23 PM.png \width13660 \height7740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+And I can also delete objects by just asking the context to delete them , save changes that I made 
+\b are actually autosaved  if I use UIDocument approach to get in the context \
+But if i use the use CoreData switch to do it then I have to save it 
 \b0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 30.27 s\
-Now we have the data we have to store this data in file System, we want to put it in a file\
+
+\b \cf0 The only thing about save is that it could throw 
+\b0 \
+As you can imagine I am saving stuff out to SQL database i could get SQL errors or some kind of FileSystem Full or things like that so you have to catch the errors if I am not gonna do the UIDocument based autosaving \
+ \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 3.58.56 PM.png \width13880 \height7740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+Now how about searching for objects tweets and TwitterUsers in there \
+So here i am gonna search for TwitterUsers that have tweeted in last 24 hours \
+\
+So first I ask TwitterUser class for fetch request you see the first line there we are saying TwitterUser.fetchRequest \
+then this fetchRequest I set a  predicate on it see \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 NSPredicate(format :)
+\b0 \
+and predicate is way of specifying the search you want you know in text it's not quite like SQL but it's very English oriented \
+So here I want any tweets that were created after 24 hours ago its yesterday is a var in previous line which is time interval since now - 24hr\
+So I have prescribed my search that way \
+I can also describe how I want  the results sorted \
+here i am gonna sort them by the name of the TwitterUser and then I can just ask the context \
+\
+Please go fetch those things that match that and it gives me back an array of those things which we might expect and if that nothing matches I will get an empty array
+\b  If there was an error may be  my predicate had a syntax error
+\b0  i said like "any troops" got created by 
+\b then this is gonna throw and I will have to catch it and figure it out 
+\b0 \
+but 
+\b otherwise it returns an array of objects so it's really easy to query the database too and it's using SQL to do that search so it's super efficient and it's even large values coming back it's efficient about that as wel
+\b0 l \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 4.26.06 PM.png \width12640 \height5900 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+And coreData can do so much more \
+it has great support for multithreading , \
+It has very close integration with UITableView (as you can imagine you often might want the information from the database to appear in tableView , you can even set it  up , So table is always showing up the results  of a fetchRequest even  if the database changes on from underneath , just automatically updates the table and you dont have to do anything in your code just say what fetch request you want associated with the table )\
+It does a lot of good database things like optimistic locking and rolling back changes \
+You can do undo / redo really easily with CoreData \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\b \cf0 CloudKit\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 2 quarter before \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+CloudKit is database also  in the same way core data is but it's not SQL {{\NeXTGraphic Screen Shot 2019-06-02 at 4.37.00 PM.png \width14160 \height8300 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}database it'a very simple database it just has kind of objects and the properties in those objects and you can query on them but they are simple queries and relationships between things have to be pretty simple and straightforward  but what's incredible about it is it's on the network , So this is a network database \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 So coreData you could have your database file on the network but when you start accessing it has to bring the file down to your local machine because it's a local SQL database thing
+\b0 \
+
+\b Where it's cloudKit actually when you make a request to search for something it does it over the internet to iCloud and says search that database and send the results back 
+\b0 \
+
+\b So cloudKits API is completely asynchronous
+\b0  , you make request and then you provide a closure and it calls you back later when it's got the  result so this requires a certain thoughtfulness in programming  when things can take a long time like that Okay\
+You have already seen this a little bit with multithreading but it's kind of amplified in cloudKit \
+Now it's not bad it just requires you to think in way as your program \
+\
+\
+so the important components of CloudKit \
+record type :- That kind of like classes \
+Fields : - thats kind of like a var in class \
+record :- that's one instance of a class\
+reference :- that's like a pointer to another class \
+Databases :- place where records are stored\
+Zones :- A sub area of database\
+Container :- that contains databases \
+Queries :- that's like a fetch request a little bit in CoreData it's actually quite similar to fetch request in CoreData \
+Subscriptions :- Which are fantastic feature that's you make a query and you give it server and you say any time the database changes such that this query would change send me a push notification (Push notification is just that comes to your app and it will even wake your app up and say well some information has arrived and that's one of the coolest if not the coolest  feature of cloudKit is that you will get notified when database changes in a way that you care about those are called subscriptions )\
+But cloudKit doesnt look like coreData and it doesnt look as much like  Swift in code you have got more functions calls and stuff \
+\
+\
+\
+\
+Now to use cloudKit you have to turn on iCloud\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 4.46.48 PM.png \width13380 \height8720 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+And you do this like a lot of things you have to turn on like push notifications and other things in capability sections of your project settings \
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 4.49.13 PM.png \width13680 \height8820 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+So you are gonna go there the capabilities and you gonna flip this switch for iCloud on and then you gonna turn on this little cloudKit switch down there and that's going to enable that capability for you to use cloudKit , if you dont turn this on wont be able to use it \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 5.23.40 PM.png \width14280 \height8640 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+and when you do that there's gonna be a little button down there called CloudKit dashboard ,\
+This cloudKit dashBoard  lets press it\
+and see what it looks like \
+it's gonna go to this place on the web where it's gonna show you your database schema so all your records types and all the little fields in it , not just that but the actual data which it's not that useful once you ship your app because you are gonna have thousands of users generated so much data you cant look at it but in development its really great \
+because you can create a object and you can go look at it make sure it got in there and it's got the right data or whatever \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 5.24.01 PM.png \width14840 \height4280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+So this dashboard is how you kind of work on your schema it's not quite like the coreData scheme editor thing because cloudKit is different than coreData it builds the schema as you go as soon as you stir if you say create an object of this name , it will just go and create it , It's gonna do it on the fly you dont have to go prebuild your schema like you do in your coreData \
+, it only work's during development obviously once you ship it to users then it's not going to create classes and fields on the fly as you access them but you are in development it's really nice it's really easy to just start writing code and have it start building the database that would match that code \
+\
+ \
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 5.24.27 PM.png \width13880 \height8160 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 5.25.39 PM.png \width13860 \height7240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+So here's what it's code look like , it doesnt look like coreData\
+\
+So you have to get a database so you are gonna use the public or private cloud database \
+Then to create a tweet You are gonna say \
+let tweet = CKRecords("Tweet") \
+  which will automatically add tweet to the table to the database if it didnt exist (CK is cloudKit)\
+Then you say \
+tweet["text"]  = "your text "\
+then to have tweeter you will say\
+let tweeter = CKRecord("TwitterUser")\
+and then say \
+CKReference(record : tweeter , action : .deleteSelf)\
+with action delete this thing if the thing its in gets deleted so you see its more verbose and doesnt look like Swift to be doing all this stuff\
+and ofcourse things like saving is asynchronous\
+So here's I wanna save this tweet and the database well it's going to I have to provide this closure and it's gonna call me back once it's finished or if there were an error\
+now this networking programming always alot of error handling \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 there are 29 different error in cloudKit error 
+\b0 \
+Not all of them can happen in every operation but a lot of them can \
+for e.g. i have shown error here not authenticated because since it's cloudKit users are not logged into iCloud on their device then it's going to know who they are so it's not gonna work so you can get that error, you can get network timeout error all kind of stuffs \
+So that's a different way of programming you have to kind of get used to it this asynchronous \
+\
+\
+\
+\
+\
+here's what a query look like , to the analog of the fetch request \
+You still use NSPredicate \
+So like text  contains some search string or whatever\
+but the predicate cant be quite as complicated as in CoreData that's fairly straightForward predicates but then you create\
+CKQuery()\
+and then you say perform \
+
+\b and of course its asynchronous so you provide a closure and it calls you back with the results of doing that query \
+So that's what querying looks like \
+So pretty simple but asynchronous and not as powerful as coreData   \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 5.26.29 PM.png \width14280 \height4360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+Standing Queries (aka subscriptions)\
+Cant show you how that code look like because we havent learnt push notification yet \
+\
+Push notifications are not that difficult there's a whole framework for it called 
+\b UserNotifcations\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+\cf0 UIDocument\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 6.07.36 PM.png \width14320 \height7820 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 Document based apps , So this is persistence when the thing that you are persisting is perceived by the user as an document \
+for e.g. EmojiArt (We created EmojiArt document put our ghost , bike , bees and then I wan to save it as a document ) and then user gonna go create a different one with some other image and some other stuff in there and then once a that's a different document so they  view them as a document same thing with your Image gallery \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 UIDocument is mechanism that is a iOS API for storing things as document that is fantastic , it takes care of absolutely everything you wanna do with the document and you have to hardly  do any work to make it work 
+\b0 \
+
+\b All you have to do is convert the model into a data and back that's it and it manages absolutely everything else 
+\b0 \
+\
+\
+So when I say it manages everything else what do i mean?\
+
+\b Well opening , writing/ reading closing document files 
+\i\b0 asynchronously
+\i0\b  is all handled by UIDocument 
+\b0 \
+\
+\
+Now why do I want my document open save asynchronously , why do do I care ? my documents are big it's not gonna take that much time to arrive to the file system who cares?\
+Well UIDocument supports saving your files in iCloud drive on the network and that could be slower , so if you have to write the code to save to iCloud Drive , you had to be very sad indeed because you have to do that networking code to figure out how did I get this thing over the network did it fail is the network  where's this way using UIDocument  you just say save and It will just call you back when it's done \
+it's all synchronous its awesome \
+It will also will auto save your document and again I told you one of the ways to get a context for your core data is to create a UIManagedDocument it's called which is a subclass of UIDocument for coreData databases and it will autoSave it \
+well the same things happens your documents can just be automatically saved  you dont even have to save them \
+\
+The most important thing about UIDocument is that it integrates with iOS 11 files app and the document browser \
+\
+\
+What do you need to do to make  UIDocument work you want \
+I assume you already have MVC that display your document and then it has some var or vars that are it's model right this is MVC ofcourse it's its got a model so like an EmojiArt we dont have our Model yet \
+but imagine we had some var of type EmojiArt which was the  model for what i am showing and it would have the URL for the image and it would have all the emoji and where they were in the size they were that would be its the model of the  thing so i am gonna assume I start there so \
+
+\b So all you need to do to turn your app into working with UIDocument is to be able to covert that model to a data and covert rom a data back to the model\
+So we can do it with archiever so we can JSOn format as the file format of your document and just use archiving to turn your model back and forth between data and that's really all you have to do 
+\b0 \
+
+\b The only other thing you might wanna do is tell the UIDocument whenever the document changes like if you drag into emoji in or whatever and then it will autosave it because you  have to tell it otherwise it doesnt know when to autosave but that did it's literally call one function myDocumentChanged and it will figure it out from there \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 that's it all you do to make a UIDocument work really implement 2 methods get and set my model as a data \
+So how do we do that we subclass UIDocument and we override 2 methods \
+one that creates the data and one gets our model from a data \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 6.13.55 PM.png \width14120 \height7720 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+Now we almost always going to want to add a var in our UIDocument subclass which is the model , that we  are going to be converting to and from a data \
+so here if i had an emojiArtDocument : UIDocument \
+i am adding a var called emojiArt : EmojiArt  \
+that's presumably the type of the model that I have in my EmojiArtDocument \
+\
+There are other methods you can override in UIDocument that do some things \
+(****)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 The main 2 things you wanna do is reading/writing data \
+and the only thing after you do create a UIDocument is specify the URL its at 
+\b0 \
+\
+So only initializer that exists for UIDocument it takes one argument as fileURL (in yellow in above pic ) and that is going to be the URL of the document\
+Now I am going to show you later that this URL might be given to you and might be an iCloud Drive and you might not even care \
+but ofcourse you also could create a URL somewhere presuming the document directory of your sandbox and create your own document if you want \
+but actually in iOS 11 usually we let the
+\b  files app mechanism give us the URL
+\b0  the user goes to where they want the file to be and they had say create document and  it gives us URL and we just call this to  create our UIDocument  \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 6.28.12 PM.png \width14140 \height7840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+Now once we have created our UIDocument we would set that var that we defined at top of the pic \
+we gonna set that model in there and then UIDocument gonna take it from there \
+it's gonna read / write files and everything \
+\
+\
+\
+\
+So how about doing this conversion from emojiArt to data and from data to EmojiArt \
+So here's the 2 methods..\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 6.30.02 PM.png \width14520 \height6720 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\b This is the method that converts the model into a data 
+\b0 \
+its' called\
+
+\b contents(forType : )
+\b0 \
+it does throws it could throw if you have a problem converting emojiArt to data  , it could throw and I will show you where that thing gets thrown to \
+and notice it returns an Any \
+you would think that it would return a data \
+But it returns in Any because you can actually also represent your document as a directory full of files that's called a file wrapper\
+But we are just gonna talk about the data way of doing it okay if you want to do the file wrapper way to look up the documentation for file wrapper it's not that hard but it's little more complicated than just turning into a data block \
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 and  so how I am gonna implement this method ?
+\b0 \
+\
+\
+Real easy i am gonna use that archiving stuff and use a JSON encoder or something right here and create a data object and I just return it , that's it and this often is a one-liner this contents(forType)\
+now the type you see right there I already said you can throw there so the type that's passed along there that's a
+\b  UTI (universal type identifier)
+\b0  
+\b This is not a type like .jpg , this 
+\b0 is a type like 
+\b public.json 
+\b0 which would be a JSOn file where
+\b  public.image is a image file t
+\b0 hose are that's the kind of things thats gonna be typing \
+(******)\
+
+\b Usually you dont care because usually your UIDocument only opens one kind of file anyways like an emojiArtDocument so you dont even care what that type is but you might be a UIDocument that can be in different formats and then maybe you care alright\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 6.44.13 PM.png \width14720 \height5720 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 \
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 You got Data and you got to turn it into your model\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+Again you probably gonna use that JSON Decoder and take the data and turn it back to EmojiArt \
+And again it's got the type there \
+load(fromContents ,ofType) type which is UTI \
+This once throws as well \
+This once is more likely to throw because here you are being given JSON thing or a data blob and you are turning into EmojiArt it might be corrupted , it might be not in right format something is wrong with it , so you might throw here\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 8.45.16 PM.png \width14260 \height6680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+In fact that's all you need to do is implement those 2 methods and now \
+you can use all the methods in UIDocument like open which opens your document and it's 
+\b asynchronous
+\b0 \
+So you provide it a closure there and it even tells you whether it successfully did it or not , if it doesnt successfully open it  (
+\b you do have to open Your UIDocument before you use it
+\b0  ofcourse because UIDocument wants to go and get the file and get the data and stuff like that call the method that converts into an emojiArt or whatever but you do have to open the file )\
+
+\b You are gonna be looking at this thing called document state  (if open is unsuccessful)
+\b0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 9.04.52 PM.png \width13560 \height8500 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 You can save your file explicitly or you can just do autosaving \
+If you are doing autosaving this is the method you have to call to tell your UIDocument i have changed \
+updateChangeCount(.done)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 Another way to do this is to use 
+\b undoManager
+\b0  of UIDocument  
+\b (undoManager is a really cool little class where everytime you do an operation like drag a new emoji in or resize it you go to the undoManager and say I just did the operation and here's the closure for how to undo it and then it automatically does undo and redo and just pull thsoe closures off till you can undo and then redo go back and forth
+\b0   )   undoManager RnD\
+and of course if you use 
+\b UIDocuments undoManager
+\b0  
+\b to do that then it will know that the document has changed when you do these undo and redo things 
+\b0 \
+So that's another way to is we use the undo manager\
+\
+\
+ if you want to explicitly say if there is a save file save one it's not like open \
+It actually has a couple of arguments here\
+The reason you have saved to URL is for saveAs  , that's because of course the document knows its own URL that was specified in its initializer the file URL\
+so save(to : URL , for : UIDocumentSaveOperation) allows you to save it off to another URL like save as\
+for : UIDocumentSaveOperation 
+\b unfortunately when you save you have to know whether this is the initial document creation save or whether it's a subsequent save ,
+\b0  you have to tell the system that\
+I am not sure why it makes you do that versus it going out and figuring it out I think it's just for flexibility because it can save into so many different kinds of container iCloud Drive, your local file System , it can even save in things like Box , so may be some of them dont allow it to ask the question whether the file exists or not I am not exactly sure  why it does that but when you save you do have to know whether you are creating it or not \
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 9.05.25 PM.png \width13740 \height6440 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\b When you are done with your Document you wanna close it \
+\
+Of course 1 of big things it does is save it if it's got any outstanding changes 
+\b0 \
+and again if it fails closing it you are gonna have this document state thing so\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 9.07.29 PM.png \width14120 \height8560 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+So what is document state thing ?\
+Document state is a var in UIDocument you can look at it see how your documents are doing \
+here are some of the values \
+.normal    that means your document is ready to use , just do whatever you want with it that to the normal state\
+
+\b .closed  that means you either you havent opened it or you are tried to open it and failed and still in closed state 
+\b0 \
+.savingError  which is you tried to save it and it failed  \
+.editingDisabled is a method on UIDocument which is disable editing (and why would you ever disable editing well \
+			for e.g. coreDataDocument UIManagedDocument it disables editing when its doing some sort of SQL operation to update the database now it only happens for 			microseconds its disabled , but essentially when you say editing disable is the state of your document you would not allow users to drag new emoji In or resize 			it  not really an issue in something like emojiArt where its very simple but it can be an issue in the coreData or some other more complicated storage 			mechanism  )\
+.progressAvailable   that means you did open on a document and the document is huge and it's downloading it from iCloud  or something and this will tell you that progress if via 			progress bar and UIDocument will tell you how far along it is and it will stay in the state until it's fully downloaded then it will move to open or normal ) \
+.inConflict    since document can be stored in network container it might get saved somewhere that had network access at the time and then start editing in another place that 		didnt have network access or vice versa resulting in 2 versions of app finally getting up to iCloud and now you might have 2 version that might be conflicting and 		that's what this  is about , Now you are not going to deal with this in your app you probably wanna get default behavior which is the it uses the one with most recent 		file date okay which ever one that was written most recently it uses but if you wanna resolve the difference \
+if you wanna notice this and resolve it you can use this 
+\b NSFileVersion.unresolvedConflictVersionsOfItems(at url : URL)
+\b0  and get all the different versions and look at the difference in them and maybe offer the user some choice whatever that had be upto you \
+Bur for things like emojiArt you are probably fine with just always taking the latest version whichever one was saved latest \
+\
+Document state this var can also be observed in the same way the keyboard observing can happen , remember I told you there was a way you could like tell the system hey if the  keyboard comes up tell me about it right that's called a 
+\b notification  
+\b0 \
+Same thing here if my document state changes tell me about it and it would tell you that .\
+\
+\
+\
+\
+\
+\
+(******)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 9.32.25 PM.png \width14840 \height8300 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+Finally I would talk about a cool little extra method you can override in UIDocument to put a thumbnail image instead of your documents icon\
+\
+By default when you look at your documents in your files app or whatever they will have icons whatever the file type icon on the jpg file icon whatever that is or if you have a emojiArt type   file it would show that icon\
+ but you can also say when the users sees my files in the filesystem actually use this thumbnail image of it as its icon \
+This is really powerful way to make easy for user to find which document they want because imagine emojiArt you do some nice art and it makes a little thumbnail of it so you can actually see the document before you open it in the file system it's like the icon of the document and to do that all you have to do is override this UIDocument method called 
+\b filedAttributesToWrite(to url  , for operation )
+\b0  this is normally just going to
+\b  return the dictionary of the file attributes like is this file hidden things like that
+\b0  \
+\pard\tx560\tx1011\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 but you can 
+\b override it get the super file attributes
+\b0  it would normally return and then 
+\b add this very special dictionary item called URLResourceKey.thumbnailDictionaryKey 
+\b0 and
+\b  
+\b0 value of this key is 
+\b another dictionary with the key
+\b0  being 
+\b URLThumbnailDictionaryItem.NSThumbnail1024x1024SizeKey
+\b0  and 
+\b the value is an UIImage
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 So you add this to dictionary if you have UIImage to be the thumbnail and return it \
+now it says there 
+\i NSThumbnail1024x1024SizeKey
+\i0\b  but it can be actually of any size\
+
+\b0 Seems to me if the size gets to small then it will start using the icons for the files so it cant be too small and i am not sure what too small is probably have to do with how big the icon image is maybe if it gets smaller than the icon image I am really not sure how it chooses but as long as the image is decent sized and I dont know if there's a limit too big but you probably wouldnt wanna waste your time creating anything bigger than 1024x1024 that's going to be a thumbnail  its going to be small in the file showing in the files app or whatever you could return it \
+ \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 9.52.03 PM.png \width12380 \height4080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+So there's some other things in UIDocuments like \
+localizedName   it will look at the URL and get the name at the end of the URL things like that \
+you can find out if you have any unsaved changes currently\
+You can get the date the files was last saved\
+
+\b  you can even do user activity which is this thing where you start working on something on one device and then you go continue on another and you will be exactly where you were before 
+\b0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\b \cf0 UIDocumentBrowserViewController\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 UIDocumentBrowserViewController which is an awesome way to give a very powerful user interface for your user inside your own app to create files and move files delte files and put them in  folders you know drag them from iCloud drive to your local hard disk all this stuff 
+\b0 \
+you get this powerful UI very little work on your part as long as you have UIDocument based app\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 10.09.59 PM.png \width14900 \height8660 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+So until now we did all stuff so we can easily take whatever our document based app is and store it in a document , we went all the way through having UIDocument write things out to the fileSystem and now we are gonna add a really cool layer of UI in the front of that so that users can pick the document they want ,rename them , move them  around all that right inside your app and the UI for this  in pic above looks a lot like the files app in iOS 11 in fact the files app in iOS 11 is probably just a very thin layer on top of this UI or this API the UIDocumentBrowserViewController \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 10.10.28 PM.png \width14660 \height8360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+So how do this thing work basically ?\
+(*****)\
+
+\b Well most important thing  to understand is  that it's just a viewcontroller but its always the root view controller of your application 
+\b0 so in other words in your storyboard its always got the  little arrow that points to it and when you run the app its gonna be the viewcontroller user see first then they will pick their whatever document they want and then your UI will take over , your Viewcontroller will come up in front of this one do whatever it does to show your document \
+\
+that's the fundamental architecture of this thing\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2019-06-02 at 10.17.14 PM.png \width14980 \height8680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b \cf0 And one thing that is important to tell this little DocumentBrowserViewController is what types of files you open 
+\b0 \
+and you do that in your project settings\
+You go to project setting underneath the info tab you got to select the target not the project \
+go to the info tab and then inside there's a little section called document types well that's the types of document you open and you just fill out this you can have multiple types and you fill out this little form like that one here \
+for e.g. i have shown how to have JSOn files be a kind of files that you open and its pretty straightforward there , they are the little things at the bottom there the bundle type and the handler rank or basically just saying well is this like a primary type of file that you open are you the only owner of this type of file or its just some other type that you can that you know how to open etc.\
 \
 }
